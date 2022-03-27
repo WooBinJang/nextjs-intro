@@ -1,5 +1,9 @@
 # NextJS Introduction
 
+# project start
+
+- npm run dev
+
 # Library vs Framework
 
 - Library, Framework의 주요 차이점은 "Inversion of Control"(통제의 역전)
@@ -10,3 +14,13 @@
 # Pages directory
 
 - pages directory 안에 있는 파일명에 따라 route가 결정된다.
+
+# Custom App
+
+- 기본 App을 재정의하려면 아래와 같이 ./pages/\_app.js 파일을 생성
+- 재정의하고 페이지 초기화를 제어
+- 페이지 변경 간에 레이아웃 유지
+- 페이지 탐색 시 state 유지
+- componentDidCatch를 사용한 Custom 에러 처리
+- 페이지에 추가 데이터 삽입
+- Global CSS 추가
