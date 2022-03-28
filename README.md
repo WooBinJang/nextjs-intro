@@ -24,3 +24,19 @@
 - componentDidCatch를 사용한 Custom 에러 처리
 - 페이지에 추가 데이터 삽입
 - Global CSS 추가
+
+# Redirects
+
+- URL이 변경
+- Redirect을 사용하려면 next.config.js에서 redirects 키를 사용
+- Redirect을 사용하면 들어오는 request 경로를 다른 destination 경로로 Redirect
+- source: 들어오는 request 경로
+- destination: redirect 할 경로
+- permanent: true 클라이언트와 search 엔진에 redirect를 영구적으로 은닉 308 status code 사용
+- permanent: fasle 일시적이고 은닉화하지 않은 307 status code 사용
+
+# Rewrites
+
+- URL이 변경되지 않음
+- Rewrites를 사용하면 들어오는 request 경로를 다른 destination 경로에 매핑
+- Rewrites은 URL 프록시 역할을 하고 destination 경로를 mask하여 사용자가 사이트에서 위치를 변경하지 않은 것처럼 보임
