@@ -40,3 +40,9 @@
 - URL이 변경되지 않음
 - Rewrites를 사용하면 들어오는 request 경로를 다른 destination 경로에 매핑
 - Rewrites은 URL 프록시 역할을 하고 destination 경로를 mask하여 사용자가 사이트에서 위치를 변경하지 않은 것처럼 보임
+
+# getServerSideProps
+
+- getServerSideProps는 서버 측에서만 실행되며 브라우저에서는 실행
+- page에서 서버 측 랜더링 함수인 getServerSideProps함수를 export하는 경우 Next.js는 getServerSideProps에서 반환된 데이터를 사용하여 각 request에서 이 페이지를 pre-render
+- pre-render해야 하는 경우에만 getServerSideProps를 사용을 권장 (pre-render : 사전에 HTML파일들을 생성 -> 퍼포먼스와 검색SEO를 향상 )
