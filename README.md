@@ -46,3 +46,12 @@
 - getServerSideProps는 서버 측에서만 실행되며 브라우저에서는 실행
 - page에서 서버 측 랜더링 함수인 getServerSideProps함수를 export하는 경우 Next.js는 getServerSideProps에서 반환된 데이터를 사용하여 각 request에서 이 페이지를 pre-render
 - pre-render해야 하는 경우에만 getServerSideProps를 사용을 권장 (pre-render : 사전에 HTML파일들을 생성 -> 퍼포먼스와 검색SEO를 향상 )
+
+# Dynamic Routes
+
+- Next.js에서는 page에 대괄호([param])를 추가하여 Dynamic Route를 생성
+
+# router.push(url, as, options)
+
+- url: 탐색할 URL
+- as: URL 표시줄에 표시될 경로에 대한 선택적 데코레이터입니다.

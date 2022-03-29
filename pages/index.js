@@ -1,17 +1,40 @@
 import { useEffect, useState } from "react/cjs/react.development";
 import NavBar from "../component/NavBar";
 import Seo from "../component/SEo";
+import { useRouter } from "next/router";
+
 export default function Home({ results }) {
+  const router = useRouter();
+  const onClick = (id, title) => {
+    router.push(
+      {
+        pathname: `movies/${id}`,
+        query: {
+          title,
+        },
+      },
+      `movies/${id}`
+    );
+  };
   return (
     <div className="container">
       <Seo title={"Home"} />
       {results?.map((movie) => (
         <div className="movie" key={movie.id}>
           <img
+            onClick={() => {
+              onClick(movie.id, movie.original_title);
+            }}
             src={`http://image.tmdb.org/t/p/w500/${movie.poster_path}`}
             alt="poster"
           />
-          <h4>{movie.original_title}</h4>
+          <h4
+            onClick={() => {
+              onClick(movie.id, movie.original_title);
+            }}
+          >
+            {movie.original_title}
+          </h4>
         </div>
       ))}
 
