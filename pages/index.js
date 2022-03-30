@@ -1,20 +1,12 @@
 import { useEffect, useState } from "react/cjs/react.development";
-import NavBar from "../component/NavBar";
-import Seo from "../component/SEo";
+import NavBar from "../components/NavBar";
+import Seo from "../components/SEo";
 import { useRouter } from "next/router";
 
 export default function Home({ results }) {
   const router = useRouter();
   const onClick = (id, title) => {
-    router.push(
-      {
-        pathname: `movies/${id}`,
-        query: {
-          title,
-        },
-      },
-      `movies/${id}`
-    );
+    router.push(`movies/${title}/${id}`);
   };
   return (
     <div className="container">
